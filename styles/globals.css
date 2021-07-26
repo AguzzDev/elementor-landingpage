@@ -1,16 +1,32 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components{
+  html{
+    @apply p-0 m-0 box-border overflow-x-hidden font-base;
+  }
+  .ant-tabs, .ant-tabs-top{
+    @apply flex flex-row w-full cursor-pointer select-none mr-20;
+  }
+  .ant-tabs-tab-active{
+    @apply text-pinkmedium;
+  }
+  .ant-tabs-content-holder{
+    @apply w-full object-cover ml-20;
+  }
+  .ant-tabs-nav-list{
+    @apply flex flex-col text-2xl space-y-6 w-full overflow-x-hidden;
+  }
 }
-
-* {
-  box-sizing: border-box;
-}
+  @media (max-width: 768px){
+    .ant-tabs-nav-wrap .ant-tabs-nav-list{
+      @apply text-base inline-flex;
+    }
+    .ant-tabs-mobile{
+      @apply flex flex-col space-y-0 text-center;
+    }
+    .ant-tabs-content-holder{
+      @apply w-full object-cover mx-auto;
+    }
+  }
