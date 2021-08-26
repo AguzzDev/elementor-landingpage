@@ -3,13 +3,9 @@ import Image from "next/image"
 
 export function TabsLanding() {
     const { TabPane } = Tabs;
-
-    function callback(key) {
-        console.log(key);
-    }
     return (
         <>
-            <Tabs defaultActiveKey="1" onChange={callback}>
+            <Tabs defaultActiveKey="1">
                 <TabPane tab="Business & Services" key="1">
                     <Image src="/tab1.png" height={650} width={800} className="object-cover" />
                 </TabPane>

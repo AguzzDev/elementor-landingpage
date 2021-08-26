@@ -4,14 +4,6 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
   theme: {
-    fontFamily: {
-      'base': ['DMSans-Regular', "ui-sans-serif"],
-      'mediumm': ['DMSans-Medium', "ui-sans-serif"],
-      'mediumitalic': ['DMSans-MediumItalic', "ui-sans-serif"],
-      'italicc': ['DMSans-Italic', "ui-sans-serif"],
-      'bolditalic': ['DMSans-BoldItalic', "ui-sans-serif"],
-      'boldd': ['DMSans-Bold', "ui-sans-serif"],
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
