@@ -2,7 +2,7 @@ import Hamburger from "hamburger-react"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 
 import { Dropdown } from "./Dropdown"
-import { SvgLogo } from "../../public/svg/svgLogo"
+import { SvgLogo } from "../../public/svg/SvgLogo"
 import { Disclosure, Transition } from "@headlessui/react"
 import { ChevronUpIcon } from "@heroicons/react/solid"
 import { data } from "../../data/data"
