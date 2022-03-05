@@ -3,7 +3,7 @@ import { IconNoColor } from "../Icon";
 import { data } from "../../data/data"
 
 export function ExpertSection() {
-  const { expertSection } = data.[0]
+  const { expertSection } = data[0]
   return (
     <>
       <div className="flex flex-col lg:flex-row justify-between space-x-20 my-5 md:mt-40">

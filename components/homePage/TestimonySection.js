@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 export function Testimony1() {
   return (
     <>
@@ -10,7 +8,7 @@ export function Testimony1() {
             <p className="text-2xl mt-6 mb-3">Mordi Levi</p>
             <p className="text-1xl">Designer, Illustrator, and Owner of Mindcube</p>
           </div>
-          <Image loading="lazy" src="/image1.png" width={500} height={500} />
+          <img loading="lazy" src="/image1.png" className="w-[20rem] h-[20rem] md:w-[40rem] md:h-[40rem]" />
         </div>
       </div>
     </>
@@ -26,7 +24,7 @@ export function Testimony2() {
             <p className="text-2xl mt-6 mb-3 text-black">Brandon Duncan</p>
             <p className="text-1xl text-gray-600">Owner & Creative Director of Regent Web Design</p>
           </div>
-          <Image loading="lazy" src="/image3.png" width={500} height={500} />
+          <img loading="lazy" src="/image3.png" className="w-[20rem] h-[20rem] md:w-[40rem] md:h-[40rem]" />
         </div>
       </div>
     </>

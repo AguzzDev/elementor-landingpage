@@ -4,7 +4,7 @@ import { Icon } from '../Icon'
 import { data } from "../../data/data"
 
 export function SkillsSection() {
-  const { title, description, topTitle, articles } = data.[0].skillSection
+  const { title, description, topTitle, articles } = data[0].skillSection
 
   return (
     <>

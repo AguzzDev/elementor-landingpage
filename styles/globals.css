@@ -1,46 +1,16 @@
 @import "./Fonts/allFonts.css";
-*{
-  font-family:Base;
+* {
+  font-family: Base;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@layer components{
-  html{
+@layer components {
+  html {
     @apply p-0 m-0 box-border overflow-x-hidden;
   }
-  .ant-tabs, .ant-tabs-top{
-    @apply flex flex-col md:flex-row w-full cursor-pointer select-none mr-20;
-  }
-  .ant-tabs-tab-active{
-    @apply text-pinkmedium;
-  }
-  .ant-tabs-content-holder{
-    @apply w-full object-cover ml-20;
-  }
-  .ant-tabs-nav{
-    @apply flex items-center;
-  }
-  .ant-tabs-nav-list{
-    @apply flex items-baseline mb-2 flex-row md:flex-col text-2xl space-y-6 space-x-3 w-full whitespace-nowrap;
-  }
-  .dropdown-menu{
-    transform: translateY(-50em);
-  }
-  .dropdown-menu .show{
-    transform: translateY(0em);
+  body {
+    @apply w-screen;
   }
 }
-  @media (max-width: 768px){
-    .ant-tabs-nav-wrap .ant-tabs-nav-list{
-      @apply text-base inline-flex;
-    }
-    .ant-tabs-mobile{
-      @apply flex flex-col space-y-0 text-center;
-    }
-    .ant-tabs-content-holder{
-      @apply w-full object-cover mx-auto;
-    }
-  }
