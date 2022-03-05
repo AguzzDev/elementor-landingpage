@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="flex flex-col mt-20 relative w-screen">
+      <section className="flex flex-col mt-20 relative w-full">
         <div className=" w-10/12 lg:w-8/12 mx-auto">
           <VideoSection />
         </div>

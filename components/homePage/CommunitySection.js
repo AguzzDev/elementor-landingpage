@@ -1,9 +1,33 @@
 import { ChevronRightIcon } from "@heroicons/react/solid"
 import { IconNoColor } from "../Icon"
 import { data } from "../../data/data"
+import { useRef, useEffect } from "react"
+import { animate } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 export function CommunitySection() {
   const { communitySection } = data[0]
+
+  const { ref, inView } = useInView()
+
+  function Counter({ from, to, simb }) {
+    const nodeRef = useRef()
+
+    useEffect(() => {
+      const node = nodeRef.current
+
+      const controls = animate(from, to, {
+        duration: 3,
+        onUpdate(value) {
+          node.textContent = value.toFixed(0) + simb
+        },
+      })
+
+      return () => controls.stop()
+    }, [from, to])
+
+    return <p className="text-5xl sm:text-7xl font-extrabold" ref={nodeRef} />
+  }
   return (
     <>
       <div className="flex flex-col md:flex-row justify-between my-20">
@@ -32,25 +56,11 @@ export function CommunitySection() {
           />
         </div>
       </div>
-      <div className="flex sm:hidden lg:flex flex-col lg:flex-row justify-between space-x-6 w-full">
-        {communitySection.map(({ id, title, desc }) => (
-          <div key={id} className="flex flex-col p-5 text-center">
-            <h1 className="text-5xl sm:text-7xl font-extrabold">{title}</h1>
-            {desc.map((t) => (
-              <p className="text-xl">
-                {t}
-                <br />
-              </p>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      <div className="hidden sm:flex lg:hidden flex-col w-full">
-        <div className="flex flex-row justify-between w-11/12 mx-auto">
-          {communitySection.map(({ id, title, desc }) => (
+      <div ref={ref}>
+        <div className="flex sm:hidden lg:flex flex-col lg:flex-row justify-between space-x-6 w-full">
+          {communitySection.map(({ id, simb, value, desc }) => (
             <div key={id} className="flex flex-col p-5 text-center">
-              <h1 className="text-5xl sm:text-7xl font-extrabold">{title}</h1>
+              <Counter from={0} to={value} simb={simb} />
               {desc.map((t) => (
                 <p className="text-xl">
                   {t}
@@ -59,6 +69,22 @@ export function CommunitySection() {
               ))}
             </div>
           ))}
+        </div>
+
+        <div className="hidden sm:flex lg:hidden flex-col w-full">
+          <div className="flex flex-row justify-between w-11/12 mx-auto">
+            {communitySection.map(({ id, title, desc }) => (
+              <div key={id} className="flex flex-col p-5 text-center">
+                <h1 className="text-5xl sm:text-7xl font-extrabold">{title}</h1>
+                {desc.map((t) => (
+                  <p className="text-xl">
+                    {t}
+                    <br />
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

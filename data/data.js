@@ -15,12 +15,23 @@ export const data = [
       },
     ],
     communitySection: [
-      { id: 1, title: "8M+", desc: ["Websites Built", "With Elementor"] },
-      { id: 2, title: "140K+", desc: ["Global Community", "Members"] },
-      { id: 3, title: "400+", desc: ["Meetup Events", "in 2020"] },
+      {
+        id: 1,
+        simb: "M+",
+        value: 8,
+        desc: ["Websites Built", "With Elementor"],
+      },
+      {
+        id: 2,
+        simb: "K+",
+        value: 140,
+        desc: ["Global Community", "Members"],
+      },
+      { id: 3, simb: "+", value: 400, desc: ["Meetup Events", "in 2020"] },
       {
         id: 4,
-        title: "330+",
+        simb: "+",
+        value: 330,
         desc: ["Tutorials, Webinars,", "Courses, and More"],
       },
     ],
