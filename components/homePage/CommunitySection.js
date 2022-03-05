@@ -73,9 +73,9 @@ export function CommunitySection() {
 
         <div className="hidden sm:flex lg:hidden flex-col w-full">
           <div className="flex flex-row justify-between w-11/12 mx-auto">
-            {communitySection.map(({ id, title, desc }) => (
+            {communitySection.map(({ id, simb, value, desc }) => (
               <div key={id} className="flex flex-col p-5 text-center">
-                <h1 className="text-5xl sm:text-7xl font-extrabold">{title}</h1>
+                <Counter from={0} to={value} simb={simb} />
                 {desc.map((t) => (
                   <p className="text-xl">
                     {t}
