@@ -43,7 +43,10 @@ export const Header = () => {
       </div>
 
       {/* Mobile */}
-      <div className="flex items-center justify-between lg:hidden fixed top-0 w-full p-5">
+      <div
+        className="flex items-center justify-between lg:hidden fixed top-0 bg-white w-full p-5"
+        style={{ zIndex: 9999 }}
+      >
         <SvgLogo />
         <>
           <DropdownMenu.Root>
