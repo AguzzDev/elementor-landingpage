@@ -4,6 +4,6 @@
 
 ![](./screenshots/1.PNG)
 
-![](./screenshots/2.PNG)
+![](./screenshots/2.png)
 
 ![](./screenshots/3.PNG)
